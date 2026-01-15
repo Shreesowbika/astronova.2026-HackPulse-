@@ -31,7 +31,4 @@ This Chrome extension detects pricing bias by comparing product prices across:
 - Shree sowbika SY
 
 ## Hackathon Project
-Built as part of a hackathon to promote fair digital commerce.
-
-## Finals Demo - Round 3
-Built for Astronova 2026
+Built for Astronova 2026 a hackathon to promote fair digital commerce.

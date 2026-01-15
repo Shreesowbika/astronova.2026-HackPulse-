@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "FairMarket AI",
+  "version": "1.0.0",
+  "description": "Detect algorithmic bias in e-commerce pricing",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.amazon.in/*",
+    "https://*.flipkart.com/*",
+    "https://*.myntra.com/*",
+    "https://*.ajio.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.in/*",
+        "https://*.flipkart.com/*",
+        "https://*.myntra.com/*",
+        "https://*.ajio.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

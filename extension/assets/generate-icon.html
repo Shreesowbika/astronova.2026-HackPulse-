@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <canvas id="canvas" width="128" height="128"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Background
+    ctx.fillStyle = '#667eea';
+    ctx.fillRect(0, 0, 128, 128);
+    
+    // Shield emoji
+    ctx.font = 'bold 80px Arial';
+    ctx.fillText('🛡️', 24, 95);
+    
+    // Download
+    canvas.toBlob(blob => {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'icon128.png';
+      a.click();
+    });
+  </script>
+</body>
+</html>
+```
+
+**Open this HTML in browser, it'll download icon128.png. Then:**
+- Resize to 48x48 (save as icon48.png)
+- Resize to 16x16 (save as icon16.png)
+- Put all in `extension/assets/` folder
+
+---
+
+## **TESTING THE EXTENSION (15 mins)**
+
+### **Step 1: Load Extension in Chrome**
+
+1. Open Chrome
+2. Go to `chrome://extensions/`
+3. Enable "Developer mode" (toggle top-right)
+4. Click "Load unpacked"
+5. Select your `extension` folder
+6. Extension should appear!
+
+---
+
+### **Step 2: Test on Amazon**
+
+1. Click the extension icon (should see your popup!)
+2. Go to `https://www.amazon.in/`
+3. Search for any laptop
+4. Click on a product
+5. **Open Chrome DevTools (F12)**
+6. Go to Console tab
+7. You should see:
+```
+   🛡️ FairMarket AI: Extension loaded on www.amazon.in
+   ✅ Supported site: Amazon India
+   🔍 Scanning page for prices...
+   💰 Price detected: 45999
+   📦 Product: Dell Inspiron 15...
+   🤖 Bias analysis: {...}

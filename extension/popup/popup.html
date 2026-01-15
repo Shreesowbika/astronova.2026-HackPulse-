@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FairMarket AI</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛡️ FairMarket AI</h1>
+      <p class="tagline">Protecting you from algorithmic bias</p>
+    </div>
+
+    <div class="status">
+      <div class="status-item">
+        <span class="label">Status:</span>
+        <span class="value" id="status">Monitoring...</span>
+      </div>
+      <div class="status-item">
+        <span class="label">Products Scanned:</span>
+        <span class="value" id="scanned">0</span>
+      </div>
+      <div class="status-item">
+        <span class="label">Bias Detected:</span>
+        <span class="value" id="bias-count">0</span>
+      </div>
+    </div>
+
+    <div class="info">
+      <h3>How it works:</h3>
+      <ol>
+        <li>Browse any e-commerce site</li>
+        <li>We detect prices in real-time</li>
+        <li>Get alerts if bias is found</li>
+        <li>Your data stays private</li>
+      </ol>
+    </div>
+
+    <div class="privacy">
+      <p>🔒 <strong>Privacy First:</strong> All detection happens on your device. Zero data sent to servers.</p>
+    </div>
+
+    <div class="footer">
+      <button id="settings-btn">Settings</button>
+      <button id="report-btn">View Reports</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
