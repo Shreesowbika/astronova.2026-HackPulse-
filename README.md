@@ -26,11 +26,8 @@ FairMarket AI is a browser-based "Price Watchdog" that uses **Edge AI** to audit
 
 | ✅ Fair Price | 🚨 Bias Detected | 💎 Good Deal |
 |:---:|:---:|:---:|
-| <img width="400"  alt="Fair Price0" src="https://github.com/user-attachments/assets/c8fd52fc-ac16-4393-af2c-d8bc96493997" />
- | <img width="400" alt="Bias Detected" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" /> | <img width="400" alt="Good Deal" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" /> |
-
+| <img width="400" alt="Fair Price0" src="https://github.com/user-attachments/assets/c8fd52fc-ac16-4393-af2c-d8bc96493997" /> | <img width="400" alt="Bias Detected" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" /> | <img width="400" alt="Good Deal" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" /> |
 <br>
-
 ## 🛠️ Tech Stack
 
 * **Frontend:** Vanilla JavaScript (Manifest V3), Chrome Storage API
