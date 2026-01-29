@@ -16,26 +16,29 @@ FairMarket AI is a browser-based "Price Watchdog" that uses **Edge AI** to audit
 
 ## 🏗️ System Architecture
 
+<div align="center">
+  <img width="800" height="400" alt="System Architecture" src="https://github.com/user-attachments/assets/9083f0ee-f72d-4595-86b6-83d0b9a1bbfd" />
+</div>
 
-<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/9083f0ee-f72d-4595-86b6-83d0b9a1bbfd" />
+<br>
 
-    
-## 📸 Screenshot
-Fair Price:
-<img width="800" height="400" alt="Screenshot 2026-01-23 162854" src="https://github.com/user-attachments/assets/d9423887-8801-460a-8151-aa909bdfcf3f" />
+## 📸 Screenshots
 
-Bias Detection:
-<img width="800" height="400" alt="Screenshot 2026-01-21 235202" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" />
+| ✅ Fair Price | 🚨 Bias Detected | 💎 Good Deal |
+|:---:|:---:|:---:|
+| <img width="400" alt="Fair Price" src="https://github.com/user-attachments/assets/d9423887-8801-460a-8151-aa909bdfcf3f" /> | <img width="400" alt="Bias Detected" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" /> | <img width="400" alt="Good Deal" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" /> |
 
-Good Deal:
-<img width="800" height="400" alt="Screenshot 2026-01-23 161500" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" />
+<br>
 
-## 🛠️ Tech stack
+## 🛠️ Tech Stack
 
-Frontend: Vanilla JavaScript (Manifest V3), Chrome Storage API
-Backend: Python, Flask (REST API)
-AI Engine: PyTorch (Server-side aggregation), Custom JS Matrix Math (Client-side inference)
-Algorithm: Federated Averaging with Momentum (FedAvgM)
+* **Frontend:** Vanilla JavaScript (Manifest V3), Chrome Storage API
+* **Backend:** Python, Flask (REST API)
+* **AI Engine:** PyTorch (Server-side aggregation), Custom JS Matrix Math (Client-side inference)
+* **Algorithm:** Federated Averaging with Momentum (FedAvgM)
 
+---
 
-This project was built for Astronova 2026.
+<div align="center">
+  <i>This project was built for <b>Astronova 2026</b>.</i>
+</div>
