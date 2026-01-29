@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 300px; padding: 15px; font-family: 'Segoe UI', sans-serif; }
+        h2 { margin-top: 0; color: #333; font-size: 18px; display: flex; align-items: center; }
+        .stat-box { background: #f8f9fa; padding: 10px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #e9ecef; }
+        .stat-value { font-size: 20px; font-weight: bold; color: #2d3436; }
+        .stat-label { font-size: 12px; color: #636e72; }
+        button { 
+            width: 100%; padding: 10px; background: #0984e3; color: white; border: none; 
+            border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s;
+        }
+        button:hover { background: #00cec9; }
+        button:disabled { background: #b2bec3; cursor: not-allowed; }
+        #status { margin-top: 10px; font-size: 12px; text-align: center; color: #636e72; height: 20px;}
+        .logo { font-size: 24px; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h2><span class="logo">🛡️</span> FairMarket AI</h2>
+    
+    <div class="stat-box">
+        <div class="stat-value" id="logCount">0</div>
+        <div class="stat-label">Pending Training Logs</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-value" id="modelVer">v1.0</div>
+        <div class="stat-label">Global Model Version</div>
+    </div>
+
+    <button id="trainBtn">🔄 Run Federated Update</button>
+    <div id="status">Ready to sync.</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

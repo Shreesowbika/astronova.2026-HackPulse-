@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroTech | Premium Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* 1. MODERN RESET & VARIABLES */
+        :root { --accent: #3b82f6; --dark: #111827; --light: #f3f4f6; --white: #ffffff; }
+        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light); color: var(--dark); }
+        
+        /* 2. HEADER */
+        header { background: var(--white); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .brand { font-size: 24px; font-weight: 800; color: var(--dark); letter-spacing: -1px; }
+        .brand span { color: var(--accent); }
+        .nav { display: flex; gap: 20px; font-weight: 600; font-size: 14px; color: #666; }
+
+        /* 3. PRODUCT HERO SECTION */
+        .container { max-width: 1000px; margin: 60px auto; background: var(--white); border-radius: 16px; overflow: hidden; display: flex; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        
+        /* Left: Image Area */
+        .image-area { flex: 1; background: #f9fafb; display: flex; align-items: center; justify-content: center; padding: 40px; }
+        .image-area img { max-width: 100%; height: auto; drop-shadow: 0 10px 20px rgba(0,0,0,0.15); border-radius: 8px; }
+
+        /* Right: Details Area */
+        .details-area { flex: 1; padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+        .tag { background: #e0e7ff; color: var(--accent); padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; width: fit-content; margin-bottom: 15px; }
+        h1 { margin: 0 0 10px 0; font-size: 32px; font-weight: 800; line-height: 1.2; }
+        .desc { color: #6b7280; font-size: 16px; line-height: 1.6; margin-bottom: 30px; }
+
+        /* Price & Action */
+        .price-wrapper { margin-bottom: 30px; }
+        .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #9ca3af; font-weight: 700; }
+        .price { font-size: 42px; font-weight: 800; color: var(--dark); }
+        .btn-buy { background: var(--dark); color: white; padding: 18px 30px; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: transform 0.2s; width: 100%; }
+        .btn-buy:hover { transform: translateY(-2px); background: black; }
+
+        /* 4. ADMIN PANEL (The Cheat Buttons) */
+        .admin-panel {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(5px);
+            padding: 10px 20px; border-radius: 50px;
+            display: flex; gap: 15px; align-items: center; color: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3); z-index: 100;
+        }
+        .admin-title { font-weight: bold; font-size: 12px; text-transform: uppercase; margin-right: 10px; color: #aaa; }
+        .sim-btn {
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            color: white; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 12px; transition: 0.2s;
+        }
+        .sim-btn:hover { background: white; color: black; }
+        .btn-risk { border-color: #ef4444; color: #ef4444; }
+        .btn-risk:hover { background: #ef4444; color: white; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">Electro<span>Tech</span></div>
+        <div class="nav">
+            <span>Laptops</span>
+            <span>Components</span>
+            <span>Accessories</span>
+            <span>Support</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="image-area">
+            <img src="laptop.jpg" alt="Premium Laptop">
+        </div>
+        
+        <div class="details-area">
+            <div class="tag">FLAGSHIP MODEL</div>
+            <h1>Titan X Pro Gaming Laptop</h1>
+            <p class="desc">Engineered for dominance. Featuring the latest Core i9 processor, RTX 4080 graphics, and a stunning 240Hz OLED display.</p>
+
+            <div class="price-wrapper">
+                <div class="label">Current Price</div>
+                <div class="price" id="product-price">₹70,000</div>
+                <div style="font-size: 14px; color: #10b981; margin-top: 5px; font-weight: 600;">In Stock • Free Shipping</div>
+            </div>
+
+            <button class="btn-buy">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="admin-panel">
+        <span class="admin-title">Location Simulation</span>
+        <button class="sim-btn" onclick="setPrice(70000)">📍 Tier-2 (Fair)</button>
+        <button class="sim-btn btn-risk" onclick="setPrice(85000)">📍 Metro (Bias)</button>
+    </div>
+
+    <script>
+        function setPrice(amount) {
+            const priceEl = document.getElementById('product-price');
+            // Animate the change slightly for realism
+            priceEl.style.opacity = 0; 
+            setTimeout(() => {
+                priceEl.innerText = "₹" + amount.toLocaleString('en-IN');
+                priceEl.style.opacity = 1;
+                priceEl.style.color = amount > 75000 ? "#ef4444" : "#111827"; // Turns red if high
+            }, 200);
+        }
+    </script>
+
+</body>
+</html>
