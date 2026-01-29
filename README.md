@@ -17,23 +17,18 @@ FairMarket AI is a browser-based "Price Watchdog" that uses **Edge AI** to audit
 ## 🏗️ System Architecture
 
 
-graph TD
-    A[User Visits Product Page] -->|Extracts JSON-LD| B(Feature Extraction)
-    B -->|Generates Vector| C{Local TinyVAE}
-    C -->|Prediction| D[Fair Price Estimate]
-    D -->|Compare| E[UI Popup Alert]
-    E -->|If Bias Detected| F[Log Gradient Update]
-    F -->|Privacy Preserved| G[Federated Client]
-    G -->|Weighted Avg| H((Central Server))
-    H -->|Global Model Update| C
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/9083f0ee-f72d-4595-86b6-83d0b9a1bbfd" />
+
     
 ## 📸 Screenshot
 Fair Price:
-<img width="1895" height="878" alt="Screenshot 2026-01-23 162854" src="https://github.com/user-attachments/assets/d9423887-8801-460a-8151-aa909bdfcf3f" />
+<img width="800" height="400" alt="Screenshot 2026-01-23 162854" src="https://github.com/user-attachments/assets/d9423887-8801-460a-8151-aa909bdfcf3f" />
+
 Bias Detection:
-<img width="1893" height="878" alt="Screenshot 2026-01-21 235202" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" />
+<img width="800" height="400" alt="Screenshot 2026-01-21 235202" src="https://github.com/user-attachments/assets/2c145927-4d83-48e9-839d-8bd82a7963d4" />
+
 Good Deal:
-<img width="1895" height="877" alt="Screenshot 2026-01-23 161500" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" />
+<img width="800" height="400" alt="Screenshot 2026-01-23 161500" src="https://github.com/user-attachments/assets/261519c3-6a56-484a-b13e-be1f25d41f69" />
 
 ## 🛠️ Tech stack
 
